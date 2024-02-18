@@ -1,0 +1,29 @@
+/******************************************************************************
+
+string ,array ,vectors ---reverse
+
+*******************************************************************************/
+#include <iostream>
+#include<bits/stdc++.h>
+ using namespace std;
+int main()
+{
+    std::cout<<"REVERSE STRING"<<endl;
+    int arr[]={3,5,6,7};
+    vector<int>v={6,7,8,9};
+    string s="SARIKA";
+    reverse(s.begin(),s.end());
+    for(auto i:v)
+    {
+        cout<<i<< " " ;
+    }
+    cout<<s;
+    int size=sizeof(arr)/sizeof(arr[0]);
+    reverse(arr,arr+size);
+
+    for(auto j:arr)
+    {
+        cout<<j<<" ";
+    }
+    return 0;
+}
