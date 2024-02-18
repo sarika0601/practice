@@ -1,0 +1,60 @@
+/******************************************************************************
+
+
+*******************************************************************************/
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    std::cout<<"Hello World"<<endl;
+    string s="itisait beautiful day";
+    map<char,int>mp;
+    for( char str:s)
+    {
+        mp[str]++;
+    }
+    for( auto &pairs:mp)
+    {
+        if(pairs.second>1 && !isspace(pairs.first)) 
+        {
+            cout<<pairs.first<<" comes "<<pairs.second<<" times"<<endl;
+        }
+    }
+    
+  int  max=0;
+  char maxkey;
+  
+  for( auto &pairs: mp)
+  {
+      if(max<pairs.second)
+      {
+          max=pairs.second;
+          maxkey=pairs.first;
+      }
+  }
+  cout<<"max elment is"<<maxkey<<"and occurence"<<max<<endl;
+  
+  
+  
+  int arr[]={4,5,3,4,2,6,8,6,4,6,5,4,0};
+     map<int,int>mpa;
+     for(auto i:arr)
+     {
+         mpa[i]++;
+     }
+     int maxi=0;
+     int maxk;
+     
+   for( auto &pairs: mpa)
+  {
+      if(maxi<pairs.second)
+      {
+          maxi=pairs.second;
+          maxk=pairs.first;
+      }
+  }
+    cout<<"max elment is"<<maxk<<"and occurence"<<maxi;
+  
+    return 0;
+}
